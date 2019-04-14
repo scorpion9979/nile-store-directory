@@ -1,16 +1,49 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="columns is-multiline">
+      <div class="column">
+        <Store
+          name="Vegan Mart"
+          description="Our store offers a great supply of vegan and organic food"
+          location="33540 Smallville, US"
+          v-bind:isOnline="true"
+        />
+      </div>
+      <div class="column">
+        <Store
+          name="Vegan Mart"
+          description="Our store offers a great supply of vegan and organic food"
+          location="33540 Smallville, US"
+          v-bind:isOnline="true"
+        />
+      </div>
+      <div class="column">
+        <Store
+          name="Vegan Mart"
+          description="Our store offers a great supply of vegan and organic food"
+          location="33540 Smallville, US"
+          v-bind:isOnline="true"
+        />
+      </div>
+      <div class="column">
+        <Store
+          name="One Dollar Store"
+          description="Buy anything for $1"
+          location="33641 Smallville, US"
+          v-bind:isOnline="false"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Store from "./components/Store.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Store
   }
 };
 </script>
@@ -77,4 +110,10 @@ $link-focus-border: $primary;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+.store {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 </style>
