@@ -1,4 +1,4 @@
-# nile-store-directory-alt
+# nile-store-directory
 
 ## Project setup
 ```
