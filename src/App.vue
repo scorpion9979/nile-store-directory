@@ -11,17 +11,17 @@
       </div>
       <div class="column">
         <Store
-          name="Vegan Mart"
-          description="Our store offers a great supply of vegan and organic food"
-          location="33540 Smallville, US"
-          v-bind:isOnline="true"
+          name="Art Store"
+          description="Our store offers a great supply of art"
+          location="22145 Smallville, US"
+          v-bind:isOnline="false"
         />
       </div>
       <div class="column">
         <Store
-          name="Vegan Mart"
-          description="Our store offers a great supply of vegan and organic food"
-          location="33540 Smallville, US"
+          name="Comics Mart"
+          description="Our store offers a great supply of comics"
+          location="99863 Smallville, US"
           v-bind:isOnline="true"
         />
       </div>
