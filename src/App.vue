@@ -1,48 +1,67 @@
 <template>
   <div id="app">
-    <div class="columns is-multiline">
-      <div class="column">
-        <Store
-          name="Vegan Mart"
-          description="Our store offers a great supply of vegan and organic food"
-          location="33540 Smallville, US"
-          v-bind:isOnline="true"
-        />
-      </div>
-      <div class="column">
-        <Store
-          name="Art Store"
-          description="Our store offers a great supply of art"
-          location="22145 Smallville, US"
-          v-bind:isOnline="false"
-        />
-      </div>
-      <div class="column">
-        <Store
-          name="Comics Mart"
-          description="Our store offers a great supply of comics"
-          location="99863 Smallville, US"
-          v-bind:isOnline="true"
-        />
-      </div>
-      <div class="column">
-        <Store
-          name="One Dollar Store"
-          description="Buy anything for $1"
-          location="33641 Smallville, US"
-          v-bind:isOnline="false"
-        />
+    <div class="container">
+      <Header/>
+    </div>
+    <div class="container">
+      <div class="columns">
+        <Sidebar class="column is-3"/>
+        <div class="column is-9">
+          <div class="content">
+            <Search/>
+          </div>
+          <div class="columns is-multiline">
+            <div class="column">
+              <Store
+                name="Vegan Mart"
+                description="Our store offers a great supply of vegan and organic food"
+                location="33540 Smallville, US"
+                v-bind:isOnline="true"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="Art Store"
+                description="Our store offers a great supply of art"
+                location="22145 Smallville, US"
+                v-bind:isOnline="false"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="Comics Mart"
+                description="Our store offers a great supply of comics"
+                location="99863 Smallville, US"
+                v-bind:isOnline="true"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="One Dollar Store"
+                description="Buy anything for $1"
+                location="33641 Smallville, US"
+                v-bind:isOnline="false"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Header from "./components/Header.vue";
+import Sidebar from "./components/Sidebar.vue";
+import Search from "./components/Search.vue";
 import Store from "./components/Store.vue";
 
 export default {
   name: "app",
   components: {
+    Header,
+    Sidebar,
+    Search,
     Store
   }
 };
@@ -115,5 +134,12 @@ $link-focus-border: $primary;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+body {
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 </style>
