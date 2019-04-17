@@ -44,6 +44,40 @@
               />
             </div>
           </div>
+          <div class="columns is-multiline">
+            <div class="column">
+              <Store
+                name="Vegan Mart"
+                description="Our store offers a great supply of vegan and organic food"
+                location="33540 Smallville, US"
+                v-bind:isOnline="true"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="Art Store"
+                description="Our store offers a great supply of art"
+                location="22145 Smallville, US"
+                v-bind:isOnline="false"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="Comics Mart"
+                description="Our store offers a great supply of comics"
+                location="99863 Smallville, US"
+                v-bind:isOnline="true"
+              />
+            </div>
+            <div class="column">
+              <Store
+                name="One Dollar Store"
+                description="Buy anything for $1"
+                location="33641 Smallville, US"
+                v-bind:isOnline="false"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
