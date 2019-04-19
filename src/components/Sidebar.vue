@@ -1,5 +1,5 @@
 <template>
-  <aside class="menu">
+  <aside class="menu is-hidden-mobile">
     <p class="menu-label">General</p>
     <ul class="menu-list">
       <li>

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <section class="hero is-dark is-medium is-bold" :style="cssProps">
     <div class="header-brand">
       <div
         alt="Nile: A decentralized, commission-free, local-economy focused online shopping platform. (And blockchain free)"
@@ -8,22 +8,47 @@
           <title>Nile</title>
           <path
             d="M410,449.45s-105.21,68.93-215,28S53.82,367.45,50.73,329.78s5-78.51,40.9-91c47.45-16.46,75.33.08,133.33,51.94s114.47,80.16,172.56,64.53c56.57-15.23,86.36-47,94.27-108.18S448.07,50.89,321,13.09C205.3-21.34,113.85,16,54.14,80.27c0,0,69.12-56.42,155.43-59.46S360.19,53.93,394.67,93.2c31.3,35.65,68.93,108.36,32.77,163.25s-83.6,33.45-119.27,1.43c-40.48-36.34-98.83-108-189.77-100.64C41.5,163.43,10.05,218.32,2.15,263.82c-8.38,48.33,1.47,175.52,145.69,232.42C287.45,551.32,391.12,463.55,410,449.45Z"
-            style="fill: #ddd"
+            v-bind:style="{fill: fillColor}"
           ></path>
-          <text x="600" y="390" font-size="380px" fill="#aaa">Nile</text>
+          <text x="600" y="390" font-size="380px" v-bind:fill="fillColor">Nile</text>
         </svg>
       </div>
     </div>
-  </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1-desktop" v-bind:style="{color: fillColor}">{{city}}</h1>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "CityHeader",
+  props: {
+    city: String,
+    fillColor: String,
+    imgUrl: String
+  },
+  computed: {
+    cssProps() {
+      return {
+        "--header-image": `url(${this.imgUrl})`
+      };
+    }
+  }
 };
 </script>
 <style scoped>
-.header {
-  margin-bottom: 25px;
+.header-brand {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.hero-body {
+  background-image: var(--header-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>

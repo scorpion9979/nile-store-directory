@@ -1,89 +1,93 @@
 <template>
   <div id="app">
-    <div class="container">
-      <Header/>
-    </div>
-    <div class="container">
-      <div class="columns">
-        <Sidebar class="column is-3"/>
-        <div class="column is-9">
-          <div class="content">
-            <Search/>
-          </div>
-          <div class="columns is-multiline is-mobile">
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Vegan Mart"
-                description="Our store offers a great supply of vegan and organic food"
-                location="33540 Smallville, US"
-                v-bind:isOnline="true"
-              />
+    <city-header
+      city="Smallville"
+      fillColor="#fff"
+      imgUrl="https://upload.wikimedia.org/wikipedia/commons/b/bd/Eulo_Bore.jpg"
+    />
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <sidebar class="column is-3"/>
+          <div class="column is-9">
+            <div class="content">
+              <search/>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Art Store"
-                description="Our store offers a great supply of art"
-                location="22145 Smallville, US"
-                v-bind:isOnline="false"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Comics Mart"
-                description="Our store offers a great supply of comics"
-                location="99863 Smallville, US"
-                v-bind:isOnline="true"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="One Dollar Store"
-                description="Buy anything for $1"
-                location="33641 Smallville, US"
-                v-bind:isOnline="false"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Vegan Mart"
-                description="Our store offers a great supply of vegan and organic food"
-                location="33540 Smallville, US"
-                v-bind:isOnline="true"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Art Store"
-                description="Our store offers a great supply of art"
-                location="22145 Smallville, US"
-                v-bind:isOnline="false"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="Comics Mart"
-                description="Our store offers a great supply of comics"
-                location="99863 Smallville, US"
-                v-bind:isOnline="true"
-              />
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
-              <Store
-                name="One Dollar Store"
-                description="Buy anything for $1"
-                location="33641 Smallville, US"
-                v-bind:isOnline="false"
-              />
+            <div class="columns is-multiline is-mobile">
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Vegan Mart"
+                  description="Our store offers a great supply of vegan and organic food"
+                  location="33540 Smallville, US"
+                  v-bind:isOnline="true"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Art Store"
+                  description="Our store offers a great supply of art"
+                  location="22145 Smallville, US"
+                  v-bind:isOnline="false"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Comics Mart"
+                  description="Our store offers a great supply of comics"
+                  location="99863 Smallville, US"
+                  v-bind:isOnline="true"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="One Dollar Store"
+                  description="Buy anything for $1"
+                  location="33641 Smallville, US"
+                  v-bind:isOnline="false"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Vegan Mart"
+                  description="Our store offers a great supply of vegan and organic food"
+                  location="33540 Smallville, US"
+                  v-bind:isOnline="true"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Art Store"
+                  description="Our store offers a great supply of art"
+                  location="22145 Smallville, US"
+                  v-bind:isOnline="false"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="Comics Mart"
+                  description="Our store offers a great supply of comics"
+                  location="99863 Smallville, US"
+                  v-bind:isOnline="true"
+                />
+              </div>
+              <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+                <store
+                  name="One Dollar Store"
+                  description="Buy anything for $1"
+                  location="33641 Smallville, US"
+                  v-bind:isOnline="false"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
+import CityHeader from "./components/CityHeader.vue";
 import Sidebar from "./components/Sidebar.vue";
 import Search from "./components/Search.vue";
 import Store from "./components/Store.vue";
@@ -91,7 +95,7 @@ import Store from "./components/Store.vue";
 export default {
   name: "app",
   components: {
-    Header,
+    CityHeader,
     Sidebar,
     Search,
     Store
@@ -166,12 +170,5 @@ $link-focus-border: $primary;
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-body {
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 </style>
