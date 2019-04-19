@@ -1,5 +1,5 @@
 <template>
-  <nav class="header">
+  <div class="header">
     <div class="header-brand">
       <div
         alt="Nile: A decentralized, commission-free, local-economy focused online shopping platform. (And blockchain free)"
@@ -14,7 +14,7 @@
         </svg>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>

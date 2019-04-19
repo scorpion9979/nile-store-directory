@@ -1,15 +1,15 @@
 <template>
   <div class="columns is-mobile">
     <div class="column">
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-medium" type="text" placeholder>
+      <div class="control has-icons-left">
+        <input class="input" type="text" placeholder="Search products">
         <span class="icon is-left">
           <b-icon icon="magnify" size="is-small"></b-icon>
         </span>
       </div>
     </div>
     <div class="column is-narrow">
-      <div class="select is-medium">
+      <div class="select">
         <select>
           <option>Grocery</option>
           <option>Books</option>

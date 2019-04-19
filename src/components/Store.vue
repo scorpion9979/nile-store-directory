@@ -8,20 +8,20 @@
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <div class="title is-size-5 is-size-4-mobile" style="margin-bottom: 2px;">{{name}}</div>
+          <div class="title is-size-5 is-size-5-mobile" style="margin-bottom: 2px;">{{name}}</div>
           <small v-if="isOnline">
             <b-icon icon="circle" size="is-small" type="is-success"></b-icon>
-            <span class="is-size-7 is-size-6-mobile" style="margin-left:3px;">Online</span>
+            <span class="is-size-7" style="margin-left:3px;">Online</span>
           </small>
           <small v-else>
             <b-icon icon="circle" size="is-small"></b-icon>
-            <span class="is-size-7 is-size-6-mobile" style="margin-left:3px;color:gray;">Offline</span>
+            <span class="is-size-7" style="margin-left:3px;color:gray;">Offline</span>
           </small>
         </div>
       </div>
 
       <div class="content">
-        <p class="is-size-6-tablet">{{description}}</p>
+        <p class="is-size-6-tablet is-size-7-mobile">{{description}}</p>
       </div>
     </div>
     <div class="card-footer">
