@@ -10,8 +10,8 @@
           <div class="content">
             <Search/>
           </div>
-          <div class="columns is-multiline">
-            <div class="column">
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Vegan Mart"
                 description="Our store offers a great supply of vegan and organic food"
@@ -19,7 +19,7 @@
                 v-bind:isOnline="true"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Art Store"
                 description="Our store offers a great supply of art"
@@ -27,7 +27,7 @@
                 v-bind:isOnline="false"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Comics Mart"
                 description="Our store offers a great supply of comics"
@@ -35,7 +35,7 @@
                 v-bind:isOnline="true"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="One Dollar Store"
                 description="Buy anything for $1"
@@ -43,9 +43,7 @@
                 v-bind:isOnline="false"
               />
             </div>
-          </div>
-          <div class="columns is-multiline">
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Vegan Mart"
                 description="Our store offers a great supply of vegan and organic food"
@@ -53,7 +51,7 @@
                 v-bind:isOnline="true"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Art Store"
                 description="Our store offers a great supply of art"
@@ -61,7 +59,7 @@
                 v-bind:isOnline="false"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="Comics Mart"
                 description="Our store offers a great supply of comics"
@@ -69,7 +67,7 @@
                 v-bind:isOnline="true"
               />
             </div>
-            <div class="column">
+            <div class="column is-one-quarter-desktop is-half-mobile">
               <Store
                 name="One Dollar Store"
                 description="Buy anything for $1"
